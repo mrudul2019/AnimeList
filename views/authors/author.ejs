@@ -1,0 +1,15 @@
+<h2>Search Authors</h2>
+<form action="/authors" method="GET">
+    <input type="text" name="name"  value="<%=search.name%>">
+    <button type="submit" >Search </button>
+
+
+</form>
+<% if (locals.authors!=null) { %>
+ 
+<ul>
+    <%authors.forEach(element => { %>
+        <li><%=element.name%></li>
+    <% }) %>
+</ul>
+<% }; %> 
